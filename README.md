@@ -30,6 +30,8 @@ It can be controlled through a **Thread** object. You must obtain a reference to
 
 > Static Thread currentThread()
 
+[Code Link](https://github.com/balajidontul/Threads/blob/e9a4ea2ce1348a8ae940c318b99c6d43e4de4b1a/Examples/CurrentThreadDemo.java)
+
 ```java
 //controlling the main thread
 public class CurrentThreadDemo {
