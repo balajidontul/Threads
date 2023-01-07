@@ -1,4 +1,4 @@
-package Threads;
+package Threads.Examples;
 
 //controlling the main thread
 public class CurrentThreadDemo {
