@@ -29,5 +29,5 @@ It can be controlled through a **Thread** object. You must obtain a reference to
 
 > Static Thread currentThread()
 
-https://github.com/balajidontul/Threads/blob/c9a2a81e23a531208bff2c453c3c0ea5d4bb19ee/Examples/CurrentThreadDemo.java
+Examples/CurrentThreadDemo.java
 
