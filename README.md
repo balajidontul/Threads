@@ -1,1 +1,2 @@
 # Threads
+Java provides built-un support for multithreaded programming. A multithreaded programs contains two or more parts that can run concurrently. Each part of such program is called a thread, and each thread defines a seperate path of execution
