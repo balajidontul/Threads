@@ -1,4 +1,4 @@
-![GitHub top language](https://img.shields.io/github/languages/top/{username}/{repo-name}?color=yellow)
+![GitHub top language](https://img.shields.io/github/languages/top/{bdontul}/{Threads}?color=yellow)
 # JAVA Threads
 ## Introduction 
 Java provides built-in support for multithreaded programming. A multithreaded programs contains two or more parts that can run concurrently. Each part of such program is called a thread, and each thread defines a seperate path of execution.
@@ -51,7 +51,7 @@ public class CurrentThreadDemo {
 }
 ```
 > Output:
->> Current thread :Thread[main,5,main] <br> After name Change :Thread[My Thread,5,main]
+> Current thread :Thread[main,5,main] <br> After name Change :Thread[My Thread,5,main]
 
 
 In this program a reference to the current thread is obtained by calling **currentThread()**, and this reference is stored in the local variable t. the program then calls **setName()** to change the internal name of the thread. **sleep()** used to accomplish the pause for one second between each line ( specify the delay in milliseconds), sleep() method in Thread might throw an **interruptedException** so surround that with try/catch block.
