@@ -1,4 +1,4 @@
-![GitHub top language](https://img.shields.io/github/languages/top/{balajidontul}/{Threads}?color=yellow)
+![GitHub top language](https://github.com/balajidontul/Threads.git?color=yellow)
 # JAVA Threads
 ## Introduction 
 Java provides built-in support for multithreaded programming. A multithreaded programs contains two or more parts that can run concurrently. Each part of such program is called a thread, and each thread defines a seperate path of execution.
