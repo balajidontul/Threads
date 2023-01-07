@@ -29,7 +29,7 @@ It can be controlled through a **Thread** object. You must obtain a reference to
 
 > Static Thread currentThread()
 
-```
+```java
 //controlling the main thread
 public class CurrentThreadDemo {
     public static void main(String[] args) {
