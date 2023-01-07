@@ -51,7 +51,8 @@ public class CurrentThreadDemo {
 ```
 > Output:
 > Current thread :Thread[main,5,main]
-After name Change :Thread[My Thread,5,main]
+> After name Change :Thread[My Thread,5,main]
+
 
 In this program a reference to the current thread is obtained by calling **currentThread()**, and this reference is stored in the local variable t. the program then calls **setName()** to change the internal name of the thread. **sleep()** used to accomplish the pause for one second between each line ( specify the delay in milliseconds), sleep() method in Thread might throw an **interruptedException** so surround that with try/catch block.
 
