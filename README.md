@@ -15,3 +15,17 @@ Once a thread is inside a synchronized method, no other trade can call any other
 ### Messaging 
 After you divide your program into separate threads, you need to define how they will communicate with each other. Java’s messaging system allows a thread to enter a synchronized method  on an object, and then wait there until other thread explicitly notify it to came out
 
+### Creating a Thread
+Java's multithreading system is built upon the **Thread** class, its methods, and its companion interface **Runnable**.
+
+Java defines two ways in which this can be accomplished:
+- implement the Runnable Interface
+- extend the Thread class, itself
+
+### The main Thread
+When a Java program starts up, one thread begins running immediately. This is usually called the main thread of your program, because it is the one that is executed when your program begins.
+
+It can be controlled through a **Thread** object. You must obtain a reference to it by calling the method *currentThread()*, which is public static member of Thread.
+
+> Static Thread currentThread()
+
