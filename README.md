@@ -275,6 +275,17 @@ You can obtain the current priority setting by calling the getPriority() method 
 
 Implementation of Java may have radically different behavior when it comes to scheduling. Most of the inconsistencies arise when you have threads that are relying on preemptive behavior, instead of cooperatively giving up CPU time. the safest way to obtain predictable, cross-platform behavior with Java is to use threads that voluntarily give up control of the CPU.
 
+---
+
+### Synchronization
+
+When two or more threads need access to shared resource, they need some way to ensure that the resource will be used by only one thread at a time. The process by which this is achieved is called *synchronization*. Java provides unique, language level support for it.
+
+Key to synchronization is the concept of the monitor. A monitor is an object that is used as a mutually exclusive lock. Only one thread can own a monitor at a given time. When a thread acquires a lock, it is said to have entered the monitor. All other threads attempting to enter the locked monitor will be suspended until the first thread exits the monitor. These other threads are said to be waiting for the monitor. 
+
+You can synchronize your code in either two ways, both involve the use of the synchronized keyword
+
+
 
 
 
