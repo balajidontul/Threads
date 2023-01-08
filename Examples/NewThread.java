@@ -4,7 +4,6 @@ public class NewThread implements Runnable {
 
     @Override
     public void run() {
-        Thread.currentThread().setName("Run method Thread ");
 
        for(int i=5; i>0;i--){
         System.out.println(Thread.currentThread().getName()+ i);
