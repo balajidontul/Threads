@@ -23,6 +23,8 @@ It can be controlled through a **Thread** object. You must obtain a reference to
 
 > Static Thread currentThread()
 
+*Example :*
+
 ```java
 //controlling the main thread
 public class CurrentThreadDemo {
@@ -69,6 +71,8 @@ Java defines two ways in which this can be accomplished:
 > Thread(Runnable threadOb, String threadName)
 - After new thread is created, it will not start running until you call its start() method, which is declared within **Thread**
 
+*Example :*
+
 ```java
 public class NewThread implements Runnable {
 
@@ -113,6 +117,22 @@ public class RunnableThreadDemo {
     }
 }
 ```
+Output
+>Main method Thread 5 <br>
+Run method Thread 5 <br>
+Run method Thread 4 <br>
+Run method Thread 3 <br>
+Main method Thread 4 <br>
+Run method Thread 2 <br>
+Main method Thread 3 <br>
+Run method Thread 1 <br>
+Exiting Run method Thread. <br>
+Main method Thread 2 <br>
+Main method Thread 1 <br>
+Exiting Main Thread <br>
+
+### Extending Thread
+
 
 
 
