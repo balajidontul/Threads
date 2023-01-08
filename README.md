@@ -234,7 +234,7 @@ public class MultipleThread {
 ```
 
 
-Output: [Note - Since you're doing multithreading, there is no guarantee what order threads will run without giving a thread a higher priority over another.]
+Output: *[ Note - Since you're doing multithreading, there is no guarantee what order threads will run without giving a thread a higher priority over another.]*
 
 >New Thread: Thread[one ,5,main] <br>
 New Thread: Thread[Two ,5,main] <br>
