@@ -130,8 +130,48 @@ Exiting Run method Thread. <br>
 Main method Thread 2 <br>
 Main method Thread 1 <br>
 Exiting Main Thread <br>
+---
 
 ### Extending Thread
+The second way to create a trade is to create a new class that extends Thread and then to create an instance of that class. The extending class must override the run() method.
+
+```java
+public class NewThreadExtend extends Thread {
+
+    public void run(){
+        for (int i = 5; i >0; i--) {
+            System.out.println(Thread.currentThread().getName()+ i);
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+    
+}
+```
+
+
+```java
+public class ThreadExtendDemo {
+
+    public static void main(String[] args) {
+        NewThreadExtend newThreadExtend = new NewThreadExtend();
+        newThreadExtend.setName("Run method Thread");
+        newThreadExtend.start();
+
+        for (int i = 5; i >0; i--) {
+            System.out.println(Thread.currentThread().getName()+i);
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+}
+```
 
 
 
