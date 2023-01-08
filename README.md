@@ -267,6 +267,7 @@ In theory, threads of equal priority should get equal access to the CPU. But you
 
 To set a thread’s priority, use the setPriority() method, which is a member of **Thread**.
 > Final void setPriority(int level)
+
 Here, Level specifies the new priority setting for the calling thread. The value of the level must be within the range MIN_PRIORITY and MAX_PRIORITY. Currently, these values are 1 and 10 respectively. To return a thread to default priority, specify NORM_PRIORITY, which is currently 5. These priorities are defined as static final variable within **Thread**.
 
 You can obtain the current priority setting by calling the getPriority() method of **Thread**.
