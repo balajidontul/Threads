@@ -16,7 +16,5 @@ public class CurrentThreadDemo {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
-    
     }
 }
