@@ -54,6 +54,7 @@ public class CurrentThreadDemo {
 ```
 Output:
 > Current thread :Thread[main,5,main] <br> After name Change :Thread[My Thread,5,main]
+<br>
 The output displays, in order [name of thread,its priority,name of its group]
 
 
