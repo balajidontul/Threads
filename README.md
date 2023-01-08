@@ -172,6 +172,11 @@ public class ThreadExtendDemo {
     }
 }
 ```
+---
+### Creating multiple Threads
+
+So far, you have been using only two threads: the main thread and one child thread. However, your program can spawn as many threads as it needs. For example the following program creates three child threads.
+
 
 
 
