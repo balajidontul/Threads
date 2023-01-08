@@ -16,13 +16,6 @@ Once a thread is inside a synchronized method, no other trade can call any other
 ### Messaging 
 After you divide your program into separate threads, you need to define how they will communicate with each other. Java’s messaging system allows a thread to enter a synchronized method  on an object, and then wait there until other thread explicitly notify it to came out
 
-### Creating a Thread
-Java's multithreading system is built upon the **Thread** class, its methods, and its companion interface **Runnable**.
-
-Java defines two ways in which this can be accomplished:
-- implement the Runnable Interface
-- extend the Thread class, itself
-
 ### The main Thread
 When a Java program starts up, one thread begins running immediately. This is usually called the main thread of your program, because it is the one that is executed when your program begins.
 
@@ -56,8 +49,27 @@ In this program a reference to the current thread is obtained by calling **curre
 
 Output:
 > Current thread :Thread[main,5,main] <br> After name Change :Thread[My Thread,5,main]
-<br>
+
 The output displays, in order [name of thread,its priority,name of its group]
+
+
+### Creating a Thread
+Java's multithreading system is built upon the **Thread** class, its methods, and its companion interface **Runnable**.
+
+Java defines two ways in which this can be accomplished:
+- implement the Runnable Interface
+- extend the Thread class, itself
+
+### Implementing Runnable
+- To create a thread is to create a class that implements the **Runnable** interface
+- To implement Runnable, a class need only implement a single method called run()
+- Inside run(), you will define the code that constitutes the new thread.
+- run() can call other method, use other classes, and declare variable, just like main thread can.
+- instantiate an object of type **Thread** from within the class that implement Runnable.
+- Thread defines several constructors, one that will use is shown below –
+> Thread(Runnable threadOb, String threadName)
+- After new thread is created, it will not start running until you call its start() method, which is declared within **Thread**
+
 
 
 
