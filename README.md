@@ -258,6 +258,21 @@ one Exiting... <br>
 Two Exiting... <br>
 Three Exiting... <br>
 Main Thread Exiting... <br>
+---
+
+### Thread Priorities
+Thread priorities are used by the thread scheduler to decide when each thread should be allowed to run. In theory, over a given period of time, higher priority threads get more CPU time than lower priority threads. In practice, the amount of CPU time that a thread gets often depends on several factors besides its priority. A higher priority thread can also preempt the lower priority thread.
+
+In theory, threads of equal priority should get equal access to the CPU. But you need to be careful. Remember Java is designed to work in a wide range of environments. some of the environments implement multitasking fundamentally differently than others.
+
+To set a thread’s priority, use the setPriority() method, which is a member of **Thread**.
+> Final void setPriority(int level)
+Here, Level specifies the new priority setting for the calling thread. The value of the level must be within the range MIN_PRIORITY and MAX_PRIORITY. Currently, these values are 1 and 10 respectively. To return a thread to default priority, specify NORM_PRIORITY, which is currently 5. These priorities are defined as static final variable within **Thread**.
+
+You can obtain the current priority setting by calling the getPriority() method of **Thread**.
+> Final int getPriority()
+
+Implementation of Java may have radically different behavior when it comes to scheduling. Most of the inconsistencies arise when you have threads that are relying on preemptive behavior, instead of cooperatively giving up CPU time. the safest way to obtain predictable, cross-platform behavior with Java is to use threads that voluntarily give up control of the CPU.
 
 
 
