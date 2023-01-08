@@ -177,8 +177,87 @@ public class ThreadExtendDemo {
 
 So far, you have been using only two threads: the main thread and one child thread. However, your program can spawn as many threads as it needs. For example the following program creates three child threads.
 
+```java
+public class NewThreadWithConstructor implements Runnable {
+    String name;
+    Thread t;
+
+    NewThreadWithConstructor(String threadName){
+        name = threadName;
+        t = new Thread(this, name);
+        System.out.println("New Thread: "+ t);
+    }
+
+    @Override
+    public void run() {
+        for (int i = 5; i >0; i--) {
+            System.out.println(Thread.currentThread().getName() + i);
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+        System.out.println(Thread.currentThread().getName()+ "Exiting...");
+    }
+}
+```
 
 
+```java
+public class MultipleThread {
+
+    static NewThreadWithConstructor nw1;
+    static NewThreadWithConstructor nw2;
+    static NewThreadWithConstructor nw3;
+
+    public static void main(String[] args) {
+        nw1 = new NewThreadWithConstructor("one ");
+        nw2 = new NewThreadWithConstructor("Two ");
+        nw3 = new NewThreadWithConstructor("Three ");
+        
+
+        nw1.t.start();
+        nw2.t.start();
+        nw3.t.start();
+
+
+        try {
+            Thread.sleep(10000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        
+        System.out.println("Main Thread Exiting...");
+    }
+}
+```
+
+
+Output: [Note - Since you're doing multithreading, there is no guarantee what order threads will run without giving a thread a higher priority over another.]
+
+>New Thread: Thread[one ,5,main] <br>
+New Thread: Thread[Two ,5,main] <br>
+New Thread: Thread[Three ,5,main] <br>
+one 5 <br>
+Three 5 <br>
+Two 5 <br>
+one 4 <br>
+Two 4 <br>
+Three 4 <br>
+one 3 <br>
+Two 3 <br>
+Three 3 <br>
+one 2 <br>
+Two 2 <br>
+Three 2 <br>
+one 1 <br>
+Two 1 <br>
+Three 1 <br>
+one Exiting... <br>
+Two Exiting... <br>
+Three Exiting... <br>
+Main Thread Exiting... <br>
 
 
 
