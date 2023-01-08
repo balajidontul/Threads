@@ -133,7 +133,7 @@ Exiting Main Thread <br>
 ---
 
 ### Extending Thread
-The second way to create a trade is to create a new class that extends Thread and then to create an instance of that class. The extending class must override the run() method.
+The second way to create a trade is to create a new class that extends **Thread** and then to create an instance of that class. The extending class must override the run() method.
 
 ```java
 public class NewThreadExtend extends Thread {
@@ -172,6 +172,11 @@ public class ThreadExtendDemo {
     }
 }
 ```
+---
+### Creating multiple Threads
+
+So far, you have been using only two threads: the main thread and one child thread. However, your program can spawn as many threads as it needs. For example the following program creates three child threads.
+
 
 
 
