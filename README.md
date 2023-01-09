@@ -272,8 +272,58 @@ The join() method of thread class waits for a thread to die. It is used when you
 >	public void join(long millis)throwsInterruptedException  
 >	public final void join(long millis, int nanos)throws InterruptedException
 
+*Example : *
 
+```java
+public class ThreadJoinandIsAlive {
+    
+    public static void main(String[] args) {
+        NewThreadWithConstructor nw1 = new NewThreadWithConstructor("One ");
+        NewThreadWithConstructor nw2 = new NewThreadWithConstructor("Two ");
+        NewThreadWithConstructor nw3 = new NewThreadWithConstructor("Three ");
 
+        nw1.t.start();
+        try {
+            
+            nw1.t.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        nw2.t.start();
+        nw3.t.start();
+
+        System.out.println("Thread one is Alive "+ nw1.t.isAlive());
+        System.out.println("Thread two is Alive "+ nw2.t.isAlive());
+        System.out.println("Thread three is Alive "+ nw3.t.isAlive());
+    }
+}
+```
+
+Output:
+>New Thread: Thread[One ,5,main] <br>
+New Thread: Thread[Two ,5,main] <br>
+New Thread: Thread[Three ,5,main] <br>
+One 5 <br>
+One 4 <br>
+One 3 <br>
+One 2 <br>
+One 1 <br>
+One Exiting... <br>
+Thread one is Alive false <br>
+Thread two is Alive true  <br>
+Thread three is Alive true <br>
+Three 5 <br>
+Two 5 <br>
+Three 4 <br>
+Two 4 <br>
+Three 3 <br>
+Two 3 <br>
+Three 2 <br>
+Two 2 <br>
+Three 1 <br>
+Two 1 <br>
+Three Exiting... <br>
+Two Exiting... <br>
 
 
 ### Thread Priorities
