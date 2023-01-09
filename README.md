@@ -272,7 +272,7 @@ The join() method of thread class waits for a thread to die. It is used when you
 >	public void join(long millis)throwsInterruptedException  
 >	public final void join(long millis, int nanos)throws InterruptedException
 
-*Example : *
+*Example :*
 
 ```java
 public class ThreadJoinandIsAlive {
