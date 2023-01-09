@@ -351,7 +351,7 @@ Key to synchronization is the concept of the monitor. A monitor is an object tha
 
 You can synchronize your code in either two ways, both involve the use of the synchronized keyword
 
-### Using Synchronized Method
+### 1)Using Synchronized Method
 
 Synchronization is easy in Java because all objects have their own implicit monitor associated with them. To enter an object’s monitor, just call a method that has been modified with the synchronized keyword. While a thread is inside a synchronized method, all other threads that try to call it on the same instance have to wait. To exit the monitor and resume control of the object to the next waiting thread, the owner of the monitor simply returns from the synchronized method.
 
