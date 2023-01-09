@@ -260,6 +260,22 @@ Three Exiting... <br>
 Main Thread Exiting... <br>
 ---
 
+### isAlive() and join()
+
+The isAlive() method of thread class tests if the thread is alive. A thread is considered alive when the start() method of thread class has been called and the thread is not yet dead. This method returns true if the thread is still running and not finished.
+
+>	public final boolean isAlive()  
+
+The join() method of thread class waits for a thread to die. It is used when you want one thread to wait for completion of another. This process is like a relay race where the second runner waits until the first runner comes and hand over the flag to him.
+
+>	public final void join()throws InterruptedException  
+>	public void join(long millis)throwsInterruptedException  
+>	public final void join(long millis, int nanos)throws InterruptedException
+
+
+
+
+
 ### Thread Priorities
 Thread priorities are used by the thread scheduler to decide when each thread should be allowed to run. In theory, over a given period of time, higher priority threads get more CPU time than lower priority threads. In practice, the amount of CPU time that a thread gets often depends on several factors besides its priority. A higher priority thread can also preempt the lower priority thread.
 
@@ -284,6 +300,7 @@ When two or more threads need access to shared resource, they need some way to e
 Key to synchronization is the concept of the monitor. A monitor is an object that is used as a mutually exclusive lock. Only one thread can own a monitor at a given time. When a thread acquires a lock, it is said to have entered the monitor. All other threads attempting to enter the locked monitor will be suspended until the first thread exits the monitor. These other threads are said to be waiting for the monitor. 
 
 You can synchronize your code in either two ways, both involve the use of the synchronized keyword
+
 
 
 
